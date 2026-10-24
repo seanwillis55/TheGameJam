@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         IsGrounded = gc.getGroundCheck();
-        //Debug.Log("is grounded = " + IsGrounded);
-        //Movement = Input.GetAxisRaw("Horizontal");
+        Debug.Log("is grounded = " + IsGrounded);
+        Movement = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(Movement * speed, rb.linearVelocityY);
     }
 

@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 200974417}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,7 +543,7 @@ BoxCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ForceReceiveLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -557,7 +557,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.40534794}
+  m_Offset: {x: 0, y: -0.41267055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -567,7 +567,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.18930411}
+  m_Size: {x: 1, y: 0.20394933}
   m_EdgeRadius: 0
 --- !u!1 &1830145539
 GameObject:
@@ -601,9 +601,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7abd490e6940833459a96e111f9081f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  Jump: 
-  speed: 8
-  JumpingPower: 5
+  Jump: w
+  speed: 6
+  JumpingPower: 8
 --- !u!212 &1830145542
 SpriteRenderer:
   serializedVersion: 2
@@ -694,7 +694,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

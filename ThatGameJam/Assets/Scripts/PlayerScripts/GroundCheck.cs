@@ -17,7 +17,7 @@ public class GroundCheck : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "OpenPlatform" || collision.gameObject.tag == "ClosedPlatform")
+        if (collision.gameObject.tag == "Floor")
         {
             IsGrounded = true;
         }
@@ -25,7 +25,7 @@ public class GroundCheck : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "OpenPlatform" || collision.gameObject.tag == "ClosedPlatform")
+        if (collision.gameObject.tag == "Floor")
         {
             IsGrounded = false;
         }
