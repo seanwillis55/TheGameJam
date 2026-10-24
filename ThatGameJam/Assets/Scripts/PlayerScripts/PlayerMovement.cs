@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded;
     //public Animator animator;
     private float Movement;
+    public bool isSwinging;
 
     Rigidbody2D rb;
 
@@ -31,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         IsGrounded = gc.getGroundCheck();
-        Debug.Log("is grounded = " + IsGrounded);
+        //Debug.Log("is grounded = " + IsGrounded);
         Movement = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(Movement * speed, rb.linearVelocityY);
     }
