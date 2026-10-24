@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -58,5 +59,40 @@ public class PlayerMovement : MonoBehaviour
         //{
         //    animator.SetBool("isWalking", false);
         //}
+    }
+
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+        if (collision.gameObject.CompareTag("Ledge"))
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                if (transform.position.y < collision.transform.position.y)
+                {
+                    rb.gravityScale = 0;
+                    Debug.Log("OnLedge");
+                    rb.position = rb.position + (Vector2.up * 2.5f * Time.deltaTime);
+                    rb.linearVelocity = Vector2.zero;
+                }
+            }
+            else
+            {
+                rb.gravityScale = 2;
+            }
+
+            
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ledge"))
+        {
+
+            rb.gravityScale = 2;
+        }
+
     }
 }
